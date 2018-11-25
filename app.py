@@ -6,8 +6,11 @@ from services.player_stats import find_player_biography, find_player_statistics,
 @app.route('/v1/player/bio')
 def findBio():
     playerName = request.args.get('playerName')
-    result_data = requests.get('https://cricapi.com/api/playerFinder?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2&name='+str(playerName))
-    return find_player_biography(result_data.json())
+    if playerName:
+        result_data = requests.get('https://cricapi.com/api/playerFinder?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2&name='+str(playerName))
+        return find_player_biography(result_data.json())
+    else:
+        return jsonify([{"message":"please provide player name"}])
 
 @app.route('/v1/player/stats')
 def find_stats():
