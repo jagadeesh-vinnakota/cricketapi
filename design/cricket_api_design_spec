@@ -1,0 +1,236 @@
+swagger: "2.0"
+info:
+  description: "This is a cricket api which can provide biography, statistics about a player, provides schedule, scores of ongoing games and old games"
+  version: "1.0.0"
+  title: "CricketAPI"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "jagadeesh.vinnakota93@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "jagadeesh.cricketapi"
+basePath: "/v1"
+tags:
+- name: "player"
+  description: "Everything about players"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+- name: "calendar"
+  description: "list the schedule"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+- name: "game scores"
+  description: "provides the game scores"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+schemes:
+- "https"
+- "http"
+paths:
+  /player/bio:
+    get:
+      tags:
+      - "player"
+      summary: "Finds bio of a player"
+      description: "Multiple status values can be provided with comma separated strings"
+      operationId: "findBiography"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "playerName"
+        in: "query"
+        description: "value that need to be considered for filter"
+        required: true
+        type: "string"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Biography"
+        400:
+          description: "Invalid status value"
+  /player/stats:
+    get:
+      tags:
+      - "player"
+      summary: "Finds bio of a player"
+      description: "Multiple status values can be provided with comma separated strings"
+      operationId: "findStats"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "playerName"
+        in: "query"
+        description: "value that need to be considered for filter"
+        required: true
+        type: "string"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Statistics"
+        400:
+          description: "Invalid status value"
+  /calendar:
+    get:
+      tags:
+      - "calendar"
+      summary: "Lists the 20 scheduled games"
+      description: "Provides the list of 20 scheduled games"
+      operationId: "fetchCalendar"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Calendar"
+        400:
+          description: "Invalid status value"
+  /oldmatchscores:
+    get:
+      tags:
+      - "game scores"
+      summary: "Provides the scores for already completed games"
+      description: "Provides the scores for already completed games"
+      operationId: "fetchOldGameScores"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/OldGame"
+        400:
+          description: "Invalid status value"
+  /newmatchscores:
+    get:
+      tags:
+      - "game scores"
+      summary: "Provides the scores for already completed games"
+      description: "Provides the scores for already completed games"
+      operationId: "fetchNewGameScores"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/NewGame"
+        400:
+          description: "Invalid status value"
+definitions:
+  OldGame:
+    type: "object"
+    properties:
+      team-1:
+        type: "string"
+        format: "string"
+      team-2:
+        type: "string"
+        format: "string"
+      score:
+        type: "string"
+        format: "string"
+  NewGame:
+    type: "object"
+    properties:
+      team-1:
+        type: "string"
+        format: "string"
+      team-2:
+        type: "string"
+        format: "string"
+      score:
+        type: "string"
+        format: "string"
+      matchStarted:
+        type: "boolean"
+        format: "boolean"
+      toss_winner_team:
+        type: "string"
+        format: "string"
+      format_type:
+        type: "string"
+        format: "string"
+  Calendar:
+    type: "object"
+    properties:
+      game:
+        type: "string"
+        format: "string"
+      scheduledDate:
+        type: "string"
+        format: "string"
+  Statistics:
+    type: "object"
+    properties:
+      batting:
+        type: "object"
+        format: "object"
+      bowling:
+        type: "object"
+        format: "object"
+  Biography:
+    type: "object"
+    properties:
+      country:
+        type: "string"
+        format: "string"
+      profile:
+        type: "string"
+        format: "string"
+      imageUrl:
+        type: "string"
+        format: "string"
+      battingStyle:
+        type: "string"
+        format: "string"
+      bowlingStyle:
+        type: "string"
+        format: "string"
+      playingRole:
+        type: "string"
+        format: "string"
+      majorTeams:
+        type: "string"
+        format: "string"
+      currentAge:
+        type: "string"
+        format: "string"
+      born:
+        type: "string"
+        format: "string"
+      fullName:
+        type: "string"
+        format: "string"
+
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
