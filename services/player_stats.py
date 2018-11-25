@@ -19,9 +19,9 @@ def find_player_biography(bio):
         player_biography['bowlingStyle'] = player_data['bowlingStyle']
         player_biography['playingRole'] = player_data['playingRole']
         player_biography['majorTeams'] = player_data['majorTeams']
-        return jsonify(player_biography)
+        return jsonify([player_biography])
     else:
-        return jsonify({"message":"Player Not Found"})
+        return jsonify([{"message":"Player Not Found"}])
 
 
 def find_player_statistics(bio):
@@ -52,9 +52,9 @@ def find_player_statistics(bio):
         player_statistics['bowling']= bowling_statistics
         player_statistics['batting'] = batting_statistics
 
-        return jsonify(player_statistics)
+        return jsonify([player_statistics]),200
     else:
-        return jsonify({"message": "Player Not Found"})
+        return jsonify([{"message": "Player Not Found"},404])
 
 
 

@@ -15,9 +15,12 @@ def findBio():
 @app.route('/v1/player/stats')
 def find_stats():
     playerName = request.args.get('playerName')
-    result_data = requests.get(
-        'https://cricapi.com/api/playerFinder?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2&name=' + str(playerName))
-    return find_player_statistics(result_data.json())
+    if playerName:
+        result_data = requests.get('https://cricapi.com/api/playerFinder?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2&name='
+                                   + str(playerName))
+        return find_player_statistics(result_data.json())
+    else:
+        return jsonify([{"message":"please provide player name"}])
 
 @app.route('/v1/calendar')
 def list_calendar():
@@ -28,6 +31,7 @@ def list_calendar():
 def old_game_scores():
     requested_scores = requests.get('https://cricapi.com/api/cricket?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2')
     return find_old_match_scores(requested_scores.json())
+
 @app.route('/v1/newmatchscores')
 def new_game_scores():
     requested_scores = requests.get('https://cricapi.com/api/matches?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2')
