@@ -23,28 +23,22 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category\": \"food\",\n    \"id\": 10001,\n    \"name\": \"bread\",\n    \"price\": 5.99\n}"
+							"raw": ""
 						},
 						"url": {
-							"raw": "https://cricapi.com/api/playerFinder?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2&name=kallis",
-							"protocol": "https",
+							"raw": "http://127.0.0.1:5000/v1/player/bio",
+							"protocol": "http",
 							"host": [
-								"cricapi",
-								"com"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
-								"api",
-								"playerFinder"
-							],
-							"query": [
-								{
-									"key": "apikey",
-									"value": "NcDjzhEkkzLTYQqn1C51qwABQhO2"
-								},
-								{
-									"key": "name",
-									"value": "kallis"
-								}
+								"v1",
+								"player",
+								"bio"
 							]
 						}
 					},
@@ -65,7 +59,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category\": \"food\",\n    \"id\": 10001,\n    \"name\": \"bread\",\n    \"price\": 5.99\n}"
+							"raw": ""
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=sachin tendulkar",
@@ -107,10 +101,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category\": \"food\",\n    \"id\": 10001,\n    \"name\": \"bread\",\n    \"price\": 5.99\n}"
+							"raw": ""
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=sachin tendulkar",
+							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=vinnakota",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -127,7 +121,7 @@
 							"query": [
 								{
 									"key": "playerName",
-									"value": "sachin tendulkar"
+									"value": "vinnakota"
 								}
 							]
 						}
@@ -149,7 +143,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category\": \"food\",\n    \"id\": 10001,\n    \"name\": \"bread\",\n    \"price\": 5.99\n}"
+							"raw": ""
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=sachin tendulkar",
@@ -197,7 +191,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category\": \"food\",\n    \"id\": 10001,\n    \"name\": \"bread\",\n    \"price\": 5.99\n}"
+							"raw": ""
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/v1/player/stats",
@@ -233,7 +227,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category\": \"food\",\n    \"id\": 10001,\n    \"name\": \"bread\",\n    \"price\": 5.99\n}"
+							"raw": ""
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/v1/player/stats?playerName=ganguly",
@@ -275,7 +269,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category\": \"food\",\n    \"id\": 10001,\n    \"name\": \"bread\",\n    \"price\": 5.99\n}"
+							"raw": ""
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=phanendra",
@@ -323,10 +317,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category\": \"food\",\n    \"id\": 10001,\n    \"name\": \"bread\",\n    \"price\": 5.99\n}"
+							"raw": ""
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=phanendra",
+							"raw": "http://127.0.0.1:5000/v1/calendar",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -337,14 +331,7 @@
 							"port": "5000",
 							"path": [
 								"v1",
-								"player",
-								"bio"
-							],
-							"query": [
-								{
-									"key": "playerName",
-									"value": "phanendra"
-								}
+								"calendar"
 							]
 						}
 					},
@@ -370,7 +357,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category\": \"food\",\n    \"id\": 10001,\n    \"name\": \"bread\",\n    \"price\": 5.99\n}"
+							"raw": ""
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/v1/oldmatchscores",
@@ -410,7 +397,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category\": \"food\",\n    \"id\": 10001,\n    \"name\": \"bread\",\n    \"price\": 5.99\n}"
+							"raw": ""
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/v1/newmatchscores",
