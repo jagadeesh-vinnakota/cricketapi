@@ -31,7 +31,7 @@ def list_calendar():
     requested_calendar = requests.get('https://cricapi.com/api/matchCalendar?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2')
     return find_schedule(requested_calendar.json()),200
 
-# serves the already completed game scores
+# serves the already completed game scores.
 @app.route('/v1/oldmatchscores')
 def old_game_scores():
     requested_scores = requests.get('https://cricapi.com/api/cricket?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2')
