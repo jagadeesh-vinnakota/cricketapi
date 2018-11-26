@@ -1,8 +1,9 @@
 import requests
 from flask import *
+import os
 app = Flask(__name__)
 from services.player_stats import find_player_biography, find_player_statistics,find_schedule, find_old_match_scores, find_new_match_scores
-
+port = int(os.getenv("PORT"))
 # serves the biography of a given player
 @app.route('/v1/player/bio')
 def findBio():
@@ -43,4 +44,4 @@ def new_game_scores():
     return find_new_match_scores(requested_scores.json()),200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port = port)
