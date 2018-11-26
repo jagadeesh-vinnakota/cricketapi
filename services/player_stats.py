@@ -1,11 +1,13 @@
 from flask import *
 import requests
 
+# provides player information
 def find_player_information(playerId):
     result_data = requests.get(
         'https://cricapi.com/api/playerStats?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2&pid={}'.format(playerId))
     return result_data.json()
 
+#provides player biography
 def find_player_biography(bio):
     if bio['data']:
         player_data = find_player_information(bio['data'][0]['pid'])
@@ -21,9 +23,9 @@ def find_player_biography(bio):
         player_biography['majorTeams'] = player_data['majorTeams']
         return jsonify([player_biography])
     else:
-        return jsonify([{"message":"Player Not Found"}])
+        return jsonify([{"message":"Player Not Found"}]),404
 
-
+# Provides the player statistics
 def find_player_statistics(bio):
     if bio['data']:
         player_statistics = {}
@@ -54,10 +56,10 @@ def find_player_statistics(bio):
 
         return jsonify([player_statistics]),200
     else:
-        return jsonify([{"message": "Player Not Found"},404])
+        return jsonify([{"message": "Player Not Found"}]),404
 
 
-
+# provides the list of scheduled games
 def find_schedule(requested_calendar):
     prepared_schedule = {}
     match_object = {}
@@ -71,21 +73,17 @@ def find_schedule(requested_calendar):
         match_object = {}
     return jsonify([prepared_schedule])
 
+# Provides the scores for a game by taking matchId as input
 def find_score_by_matchId(matchId):
-
     score_card =requests.get('https://cricapi.com/api/cricketScore?apikey=NcDjzhEkkzLTYQqn1C51qwABQhO2&unique_id={}'.format(matchId))
-
     modified_score_card = score_card.json()
-
     updated_score_card = {}
     updated_score_card['team-1'] = modified_score_card['team-1'] if 'team-1' in modified_score_card.keys() else None
     updated_score_card['team-2'] = modified_score_card['team-2'] if 'team-2' in modified_score_card.keys() else None
     updated_score_card['score'] = modified_score_card['score'] if 'score' in modified_score_card.keys() else None
-
     return updated_score_card
-
+# provides the scores for already completed games
 def find_old_match_scores(requested_scores):
-
     prepared_scores = {}
     for number in range(0,5):
         prepared_scores['game'+str(number+1)] = find_score_by_matchId(requested_scores['data'][number]['unique_id'])
@@ -97,6 +95,7 @@ def find_new_match_scorebyid(matchId):
     modified_score_card = score_card.json()
     return modified_score_card['score'] if 'score' in modified_score_card.keys() else None
 
+# provides the scores for ongoing games
 def find_new_match_scores(requested_scores):
     prepared_scores = {}
     match_data = {}
@@ -121,5 +120,4 @@ def find_new_match_scores(requested_scores):
         match_data['score'] = score
         prepared_scores['game'+str(number+1)] = match_data
         match_data = {}
-
     return jsonify([prepared_scores])
