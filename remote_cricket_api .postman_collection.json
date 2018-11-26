@@ -1,0 +1,519 @@
+{
+	"variables": [],
+	"info": {
+		"name": "remote_cricket_api ",
+		"_postman_id": "467646d5-a1e4-d946-56e4-d193f173b269",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "player-bio",
+			"description": "Testing the endpoint for /player/bio",
+			"item": [
+				{
+					"name": "exit condition",
+					"request": {
+						"url": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/bio",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playerName=sachin tendulkar",
+					"request": {
+						"url": {
+							"raw": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/bio?playerName=sachin tendulkar",
+							"protocol": "https",
+							"host": [
+								"apiforcricket-persistent-topi",
+								"cfapps",
+								"io"
+							],
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "sachin tendulkar",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playerName=vinnakota",
+					"request": {
+						"url": {
+							"raw": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/bio?playerName=vinnakota",
+							"protocol": "https",
+							"host": [
+								"apiforcricket-persistent-topi",
+								"cfapps",
+								"io"
+							],
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "vinnakota",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playerName=taibu",
+					"request": {
+						"url": {
+							"raw": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/bio?playerName=sachin tendulkar",
+							"protocol": "https",
+							"host": [
+								"apiforcricket-persistent-topi",
+								"cfapps",
+								"io"
+							],
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "sachin tendulkar",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playerName=vaughn",
+					"request": {
+						"url": {
+							"raw": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/bio?playerName=vaughn",
+							"protocol": "https",
+							"host": [
+								"apiforcricket-persistent-topi",
+								"cfapps",
+								"io"
+							],
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "vaughn",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playerName=oram",
+					"request": {
+						"url": {
+							"raw": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/bio?playerName=oram",
+							"protocol": "https",
+							"host": [
+								"apiforcricket-persistent-topi",
+								"cfapps",
+								"io"
+							],
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "oram",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "player-statistics",
+			"description": "Provides player statistics",
+			"item": [
+				{
+					"name": "exit condition",
+					"request": {
+						"url": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/stats",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playername = ganguly",
+					"request": {
+						"url": {
+							"raw": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/stats?playerName=ganguly",
+							"protocol": "https",
+							"host": [
+								"apiforcricket-persistent-topi",
+								"cfapps",
+								"io"
+							],
+							"path": [
+								"v1",
+								"player",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "ganguly",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playername = phanendra",
+					"request": {
+						"url": {
+							"raw": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/bio?playerName=phanendra",
+							"protocol": "https",
+							"host": [
+								"apiforcricket-persistent-topi",
+								"cfapps",
+								"io"
+							],
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "phanendra",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playername = brett lee",
+					"request": {
+						"url": {
+							"raw": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/bio?playerName=brett lee",
+							"protocol": "https",
+							"host": [
+								"apiforcricket-persistent-topi",
+								"cfapps",
+								"io"
+							],
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "brett lee",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playername = brian lara",
+					"request": {
+						"url": {
+							"raw": "https://apiforcricket-persistent-topi.cfapps.io/v1/player/bio?playerName=brian lara",
+							"protocol": "https",
+							"host": [
+								"apiforcricket-persistent-topi",
+								"cfapps",
+								"io"
+							],
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "brian lara",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "calendar",
+			"description": "",
+			"item": [
+				{
+					"name": "calendar",
+					"request": {
+						"url": "https://apiforcricket-persistent-topi.cfapps.io/v1/calendar",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "old match scores",
+			"description": "",
+			"item": [
+				{
+					"name": "old match scores",
+					"request": {
+						"url": "https://apiforcricket-persistent-topi.cfapps.io/v1/oldmatchscores",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "new game scores",
+			"description": "",
+			"item": [
+				{
+					"name": "new game scores",
+					"request": {
+						"url": "https://apiforcricket-persistent-topi.cfapps.io/v1/newmatchscores",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
