@@ -1,0 +1,527 @@
+{
+	"variables": [],
+	"info": {
+		"name": "local_cricket_api",
+		"_postman_id": "bd7fd7b6-5755-43da-9135-2223b4349465",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "player-bio",
+			"description": "Testing the endpoint for /player/bio",
+			"item": [
+				{
+					"name": "exit condition",
+					"request": {
+						"url": "http://127.0.0.1:5000/v1/player/bio",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playerName=sachin tendulkar",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=sachin tendulkar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "sachin tendulkar",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playerName=vinnakota",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=vinnakota",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "vinnakota",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playerName=taibu",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=sachin tendulkar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "sachin tendulkar",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playerName=vaughn",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=vaughn",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "vaughn",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playerName=oram",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=oram",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "oram",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "player-statistics",
+			"description": "Provides player statistics",
+			"item": [
+				{
+					"name": "exit condition",
+					"request": {
+						"url": "http://127.0.0.1:5000/v1/player/stats",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playername = ganguly",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/player/stats?playerName=ganguly",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"player",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "ganguly",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playername = phanendra",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=phanendra",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "phanendra",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playername = brett lee",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=brett lee",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "brett lee",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "playername = brian lara",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:5000/v1/player/bio?playerName=phanendra",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"player",
+								"bio"
+							],
+							"query": [
+								{
+									"key": "playerName",
+									"value": "phanendra",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "calendar",
+			"description": "",
+			"item": [
+				{
+					"name": "calendar",
+					"request": {
+						"url": "http://127.0.0.1:5000/v1/calendar",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "old match scores",
+			"description": "",
+			"item": [
+				{
+					"name": "old match scores",
+					"request": {
+						"url": "http://127.0.0.1:5000/v1/oldmatchscores",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "new game scores",
+			"description": "",
+			"item": [
+				{
+					"name": "new game scores",
+					"request": {
+						"url": "http://127.0.0.1:5000/v1/newmatchscores",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
