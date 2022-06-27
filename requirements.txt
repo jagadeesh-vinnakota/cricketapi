@@ -28,7 +28,7 @@ jsonschema==2.6.0
 MarkupSafe==1.1.0
 marshmallow==3.0.0b20
 more-itertools==4.3.0
-mysql-connector-python==8.0.13
+mysql-connector-python==8.0.14
 openapi-spec-validator==0.2.4
 pluggy==0.8.0
 protobuf==3.6.1
